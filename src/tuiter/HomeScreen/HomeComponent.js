@@ -1,5 +1,3 @@
-import {Link} from "react-router-dom";
-// import HomeComponent from "./HomeComponent";
 import React from "react";
 import WhatsHappening from "../WhatsHappening";
 import TuitList from "../tuit-list";

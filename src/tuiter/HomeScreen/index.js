@@ -1,7 +1,6 @@
 
 import React from "react";
-import WhatsHappening from "../WhatsHappening";
-import TuitList from "../tuit-list";
+
 import NavigationSidebar from "../NavigationSidebar";
 import WhoToFollowList from "../who-to-follow-list";
 import HomeComponent from "./HomeComponent";

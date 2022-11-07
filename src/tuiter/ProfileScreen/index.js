@@ -1,8 +1,6 @@
-import {Link} from "react-router-dom";
 import React from "react";
 import Profile from "../Profile";
 import NavigationSidebar from "../NavigationSidebar";
-import HomeComponent from "../home-screen/HomeComponent";
 import WhoToFollowList from "../who-to-follow-list";
 
 const ProfileScreen = () => {

@@ -2,8 +2,7 @@ import React from "react";
 import NavigationSidebar from "../NavigationSidebar";
 import ExploreComponent from "./ExploreComponent.js";
 import WhoToFollowList from "../WhoToFollowList";
-import {Link} from "react-router-dom";
-import HomeComponent from "../home-screen/HomeComponent";
+
 
 
 const ExploreScreen = () => {
