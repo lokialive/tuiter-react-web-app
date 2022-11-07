@@ -40,10 +40,10 @@ const TuitItem = ({
                 <div className="wd-overflow-hidden">
                     <span className="wd-post-padding-left-16px wd-name">{tuit.postedBy.username} <i className="fa-solid fa-circle-check"/></span>
                     <span className="wd-font-15px wd-font-lightgray">@{tuit.handle} · {tuit.time}</span>
-                    <span className="wd-float-right"><a href="#" className="wd-font-lightgray">
+                    <span className="wd-float-right"><div href="#" className="wd-font-lightgray">
                         <i onClick={() =>
                             deleteTuit(tuit)}
-                           className="wd-post-padding-right-12px fa-solid fa-xmark"/></a>
+                           className="wd-post-padding-right-12px fa-solid fa-xmark"/></div>
                     </span>
                     <div className=" wd-post-padding-left-12px">
                         <div >

@@ -1,5 +1,4 @@
 import tuits from "../data/tuits.json";
-import { createSlice } from "@reduxjs/toolkit";
 
 const tuitsReducer =
     (state = tuits, action) => {
