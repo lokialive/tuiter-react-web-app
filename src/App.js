@@ -1,28 +1,47 @@
+import './vendors/bootstrap/css/bootstrap.min.css';
+import './vendors/fontawesome/css/all.min.css';
 import './App.css';
-import Labs from "./labs"
-import HelloWorld from "./labs/a6/hello-world";
-import Tuiter from "./tuiter";
-import {BrowserRouter} from "react-router-dom";
-import {Routes, Route} from "react-router";
-import TuiterExplore from "./tuiter/explore";
-import TuiterHome from "./tuiter/home";
-
+import Nav from "./nav";
+import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
+import HomeScreen from "./Tuiter/home-screen";
+import ExploreScreen from "./Tuiter/ExploreScreen/ExploreScreen";
+import ProfileScreen from "./Tuiter/ProfileScreen";
+import EditProfile from "./Tuiter/EditProfile";
+import React from "react";
+import Assignment6 from "./labs/a6";
+import Assignment7 from "./labs/a7";
+import {combineReducers, createStore} from "redux";
+import tuitsReducer from "./Tuiter/reducers/tuits-reducer";
+import whoReducer from "./Tuiter/reducers/who-reducer";
+import profileDataReducer from "./Tuiter/reducers/profileData-reducer";
+import {Provider} from "react-redux";
+const reducer = combineReducers({tuits: tuitsReducer, who: whoReducer, profileData: profileDataReducer});
+const store = createStore(reducer);
 function App() {
-  return (
-      <BrowserRouter>
-        <div className="container">
-          <Routes>
-            <Route index element={<Labs/>}/>
-            <Route path="/hello" element={<HelloWorld/>}/>
-            <Route path="/tuiter" element={<Tuiter/>}/>
-            <Route path="/tuiter/explore" element={<TuiterExplore/>}/>
-            <Route path="/tuiter/home" element={<TuiterHome/>}/>
-          </Routes>
+    return (
+        <Provider store={store}>
+        <BrowserRouter>
+           <Nav/>
+            <Routes>
+                <Route index
+                       element={<Assignment6/>}/>
+                <Route path="a7"
+                       element={<Assignment7/>}/>
 
-
-        </div>
-      </BrowserRouter>
-  );
+                <Route path="tuiter/home"
+                       element={<HomeScreen/>}/>
+                <Route path="tuiter/explore"
+                       element={<ExploreScreen/>}/>
+                <Route path="tuiter/profile"
+                       element={<ProfileScreen/>}/>
+                <Route path="tuiter/edit-profile"
+                       element={<EditProfile/>}/>
+            </Routes>
+        </BrowserRouter>
+      </Provider>
+    );
 }
+
 export default App;
+
 
