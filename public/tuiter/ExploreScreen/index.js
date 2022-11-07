@@ -1,5 +1,5 @@
-// import NavigationSidebar from "../NavigationSidebar/index.js";
-// import WhoToFollowList from "../WhoToFollow/index.js";
+// import NavigationSidebar from "../NavigationSidebar/HomeScreen.js";
+// import WhoToFollowList from "../WhoToFollow/HomeScreen.js";
 // import ExploreComponent from "./ExploreComponent";
 
 

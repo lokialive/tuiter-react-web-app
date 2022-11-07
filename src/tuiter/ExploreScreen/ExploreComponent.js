@@ -15,17 +15,17 @@ const ExploreComponent = ({active}) => {
                 </div>
 
                 <div className="display-inline col-2 p-0">
-                    <a href="#"><span><i className="fa-solid fa-gear fa-2x gear-pos "/></span></a>
+                    <a href="../tuiter/home"><span><i className="fa-solid fa-gear fa-2x gear-pos "/></span></a>
                 </div>
             </div>
 
 
             <ul className="nav mb-2 nav-tabs">
                 {tags.map(tag => {
-                    return(<NavTag tag={tag} active={active}/>)
+                    return(<NavTag key={tag._id} tag={tag} active={active}/>)
                 })}
-                <li className="nav-item d-sm-none d-md-inline">
-                    <a className="nav-link" href="#">
+                <li className="nav-item d-sm-none d-md-inline" key="001">
+                    <a className="nav-link" href="../tuiter/home">
                         Entertainment
                     </a>
                 </li>

@@ -4,7 +4,7 @@ const PostSummaryList = () => {
     return(
         <ul className="list-group">
             {posts.map(post => {
-                return(<PostSummaryItem post={post}/>);
+                return(<PostSummaryItem  key={post._id} post={post}/>);
             })}
         </ul>
     );

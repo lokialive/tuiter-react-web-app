@@ -1,6 +1,7 @@
 const NavTag = ({
                      tag = {
                          link: '#',
+
                          tagName: 'For you',
                      }, active
                  }) => {

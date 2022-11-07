@@ -3,18 +3,20 @@ import './vendors/fontawesome/css/all.min.css';
 import './App.css';
 import Nav from "./nav";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import HomeScreen from "./Tuiter/HomeScreen"
+import HomeScreen from "./Tuiter/HomeScreen/HomeScreen"
 import ExploreScreen from "./Tuiter/ExploreScreen/ExploreScreen";
 import ProfileScreen from "./Tuiter/ProfileScreen";
 import EditProfile from "./Tuiter/EditProfile";
 import React from "react";
 import Assignment6 from "./labs/a6";
+
 import Assignment7 from "./labs/a7";
-import {combineReducers, createStore} from "redux";
+import {combineReducers} from "redux";
 import tuitsReducer from "./Tuiter/reducers/tuits-reducer";
 import whoReducer from "./Tuiter/reducers/who-reducer";
 import profileDataReducer from "./Tuiter/reducers/profileData-reducer";
 import {Provider} from "react-redux";
+import { legacy_createStore as createStore} from 'redux'
 const reducer = combineReducers({tuits: tuitsReducer, who: whoReducer, profileData: profileDataReducer});
 const store = createStore(reducer);
 function App() {
