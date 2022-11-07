@@ -5,7 +5,7 @@ import Nav from "./nav";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import HomeScreen from "./Tuiter/HomeScreen/HomeScreen"
 import ExploreScreen from "./Tuiter/ExploreScreen/ExploreScreen";
-import ProfileScreen from "./Tuiter/ProfileScreen";
+import ProfileScreen from "./Tuiter/ProfileScreen/ProfileScreen";
 import EditProfile from "./Tuiter/EditProfile";
 import React from "react";
 import Assignment6 from "./labs/a6";
