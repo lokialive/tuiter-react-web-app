@@ -3,7 +3,7 @@ import './vendors/fontawesome/css/all.min.css';
 import './App.css';
 import Nav from "./nav";
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
-import HomeScreen from "./Tuiter/home-screen";
+import HomeScreen from "./Tuiter/home-screen/HomeComponent";
 import ExploreScreen from "./Tuiter/ExploreScreen/ExploreScreen";
 import ProfileScreen from "./Tuiter/ProfileScreen";
 import EditProfile from "./Tuiter/EditProfile";

@@ -4,7 +4,7 @@ import React from "react";
 import WhatsHappening from "../WhatsHappening";
 import TuitList from "../tuit-list";
 
-const HomeScreen = () => {
+const HomeComponent = () => {
     return(
         <>
             <div className="row mt-2">
@@ -17,4 +17,4 @@ const HomeScreen = () => {
         </>
     )
 }
-export default HomeScreen;
+export default HomeComponent;
