@@ -1,4 +1,4 @@
-import '../HomeScreen/home.css'
+import '../home/home.css'
 const PostItem = ({
                     post= {avatarImg:"https://pbs.twimg.com/profile_images/1489375145684873217/3VYnFrzx_400x400.jpg",
                       name: "Elon Musk", handle: "elonmusk", time: "23h",
