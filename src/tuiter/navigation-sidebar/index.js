@@ -8,7 +8,7 @@ const NavigationSidebar = () => {
     const active = paths[2];
     return (
         <div className="list-group">
-            <p  className="list-group-item">Tuiter</p>
+            <div  className="list-group-item">Tuiter</div>
             <Link to="/tuiter/home" className={`list-group-item ${active === 'home'?'active':''}`}>
                 <i className="bi bi-house-door-fill me-2"></i>
                 <span> Home</span>
@@ -27,11 +27,11 @@ const NavigationSidebar = () => {
                 <i className="bi bi-bell-fill me-2"></i>
                 <span> Notifications</span>
             </div>
-            <p className={`list-group-item
+            <div className={`list-group-item
                     ${active === 'messages'?'active':''}`}>
                 <i className="bi bi-envelope-fill me-2"></i>
                 <span> Messages</span>
-            </p>
+            </div>
 
             <div className={`list-group-item
                     ${active === 'bookmarks'?'active':''}`}>
