@@ -11,12 +11,12 @@ const WhatsHappening = () => {
             tuit: whatsHappening
         };
         dispatch(createTuitThunk(newTuit));
-        //console.log(whatsHappening);
+        console.log(whatsHappening);
     };
     return (
         <div className="row">
             <div className="col-auto">
-                <img src="../../images/NASA_icon.png" width={60}/>
+                <img src="../../images/NASA_icon.png" alt="" width={60}/>
             </div>
             <div className="col-10">
        <textarea value={whatsHappening} placeholder="What's happening?"
