@@ -1,0 +1,19 @@
+body {
+    /*font-family: "Arial Black";*/
+    background-color: white;
+    color: white;
+}
+.wd-main-body{
+    margin-left: 16px;
+    margin-right: 40px;
+    border-left: 1px solid rgb(47, 51, 54);
+    border-right: 1px solid rgb(47, 51, 54);
+}
+
+.wd-font-size-13{
+    font-size: 13px;
+}
+
+.wd-color-blue{
+    color: rgb(29,161,242);
+}
