@@ -1,5 +1,5 @@
-import PostSummaryList from "../post-summary-list/index.js";
-import React from "react";
+import PostSummaryList from '../post-summary-list/index.js'
+import React from 'react'
 
 const ExploreComponent = () => {
   return (
@@ -8,17 +8,17 @@ const ExploreComponent = () => {
         <div
           className="col-10"
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <div className="input-group">
             <span
               className="input-group-append"
               style={{
-                backgroundColor: "white",
-                borderRadius: "25px 0 0 25px",
+                backgroundColor: 'white',
+                borderRadius: '25px 0 0 25px',
               }}
             >
               <button className="btn" type="button">
@@ -29,21 +29,21 @@ const ExploreComponent = () => {
               className="form-control"
               type="search"
               placeholder="Search Twitter"
-              style={{ borderRadius: "0 25px 25px 0" }}
+              style={{ borderRadius: '0 25px 25px 0' }}
             />
           </div>
         </div>
         <div
           className="col-2"
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
-          <a href="#">
+          <button href="#">
             <i className="fa fa-inverse fa-cog fa-2x" aria-hidden="true"></i>
-          </a>
+          </button>
         </div>
       </div>
       <ul className="nav mb-2 mt-2 nav-tabs">
@@ -58,9 +58,9 @@ const ExploreComponent = () => {
           </a>
         </span>
         <span className="nav-item">
-          <a className="nav-link " href="#">
+          <button className="nav-link " href="#">
             <small>COVID-19</small>
-          </a>
+          </button>
         </span>
         <span className="nav-item">
           <a className="nav-link " href="./news.html">
@@ -81,7 +81,7 @@ const ExploreComponent = () => {
       <div className="row position-relative">
         <div>
           <img
-            style={{ width: "100%", height: "100%", padding: "none" }}
+            style={{ width: '100%', height: '100%', padding: 'none' }}
             src="/tuiter/images/starship.jpeg"
             alt="SpaceX Ship"
           />
@@ -92,6 +92,6 @@ const ExploreComponent = () => {
       </div>
       <PostSummaryList />
     </>
-  );
-};
-export default ExploreComponent;
+  )
+}
+export default ExploreComponent

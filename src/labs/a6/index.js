@@ -1,8 +1,7 @@
-import Nav from "../../nav";
-import Classes from "./classes";
-import ConditionalOutput from "./conditional-output";
-import Styles from "./styles";
-import TodoList from "./todo/todo-list";
+import Classes from './classes'
+import ConditionalOutput from './conditional-output'
+import Styles from './styles'
+import TodoList from './todo/todo-list'
 function Assignment6() {
   return (
     <div>
@@ -12,7 +11,7 @@ function Assignment6() {
       <Classes />
       <TodoList />
     </div>
-  );
+  )
 }
 
-export default Assignment6;
+export default Assignment6
