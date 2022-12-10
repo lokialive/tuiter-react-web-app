@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react'
 const PostSummaryItem = ({
   post = {
-    topic: "Web Development",
-    userName: "ReactJS",
-    time: "2h",
+    topic: 'Web Development',
+    userName: 'ReactJS',
+    time: '2h',
     title:
-      "React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs",
-    image: "/tuiter/images/react.png",
+      'React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs',
+    image: '/tuiter/images/react.png',
   },
 }) => {
   return (
     <li className="list-group-item">
       <div
         className="row wd-explore-story-container"
-        style={{ padding: "3px 0 3px 0" }}
+        style={{ padding: '3px 0 3px 0' }}
       >
-        <div className="col-10" style={{ fontSize: "13px" }}>
+        <div className="col-10" style={{ fontSize: '13px' }}>
           <div className="text-muted">{post.topic}</div>
           <div className="">
             <b>{post.userName}</b>&nbsp;
@@ -31,26 +31,26 @@ const PostSummaryItem = ({
                     wd-explore-feed-img-container 
                     wd-flex-and-center"
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <img
             src={post.image}
             className="wd-explore-feed-img"
             style={{
-              height: "60px",
-              width: "60px",
-              display: "block",
-              borderRadius: "5px",
-              objectFit: "cover",
+              height: '60px',
+              width: '60px',
+              display: 'block',
+              borderRadius: '5px',
+              objectFit: 'cover',
             }}
             alt=""
           />
         </div>
       </div>
     </li>
-  );
-};
-export default PostSummaryItem;
+  )
+}
+export default PostSummaryItem
