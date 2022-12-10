@@ -1,0 +1,128 @@
+:root {
+  --twitter-blue: #1da1f2;
+}
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+.wd-navigation-links-container a {
+  font-size: 17px;
+  background-color: black;
+}
+.wd-navigation-links-container a .d-none {
+  margin-left: 5px;
+}
+.wd-color-twitter-blue {
+  color: #1da1f2;
+}
+
+.wd-who-to-follow-cell img {
+  height: 39px;
+  width: 39px;
+  object-fit: cover;
+}
+
+.wd-who-to-follow-cell {
+  font-size: 14px;
+}
+
+.wd-who-to-follow-cell .col-7 {
+  padding-left: 0px;
+}
+
+.wd-who-to-follow-cell .col-3 .btn {
+  border-radius: 26px;
+}
+
+.wd-twitter-feed-container input {
+  border: none;
+}
+
+.input-group .form-control:focus {
+  border-color: #1da1f2;
+  box-shadow: 0 0 0 0.1rem #4e7084;
+  width: auto;
+}
+
+.wd-flex-and-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wd-feed-search-bar {
+  border-radius: 26px;
+}
+
+.wd-main-feed-img-container {
+  padding: none;
+}
+.wd-main-feed-img-container img {
+  width: 100%;
+  height: 100%;
+  padding: none;
+}
+.fa-stack {
+  font-size: 50%;
+}
+.wd-tweet-btn:hover {
+  color: white;
+  font-size: 1.1em;
+  padding: 5px;
+}
+.wd-tweet-btn {
+  border-radius: 26px;
+  width: 85%;
+  background-color: #1da1f2;
+  color: rgb(248, 248, 248);
+}
+
+.nav-pills {
+  font-size: 13px;
+  display: inline-flex;
+  font-weight: bolder;
+  justify-content: space-between;
+}
+
+.wd-explore-feed-img {
+  height: 60px;
+  width: 60px;
+  display: block;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.wd-explore-story-container {
+  border: 1px solid rgb(61, 60, 60);
+  border-radius: 0px 0px 2px 2px;
+  border-top: none;
+  padding: 11px;
+}
+
+.wd-explore-feed-text-container {
+  font-size: 13px;
+}
+
+.wd-override-row > * {
+  padding: 0;
+}
+
+.wd-tab-active {
+  border-bottom: 5px solid #1da1f2;
+}
+
+.list-group {
+  border-radius: 15px;
+}
+
+.wd-navigation-links-container .list-group-item:hover {
+  background-color: black;
+  font-size: 17px;
+}
+
+.wd-page-tab-hightlight {
+  font-weight: bolder;
+}
+
+.wd-more-info div span {
+  font-size: 13px;
+  margin-left: 10px;
+}

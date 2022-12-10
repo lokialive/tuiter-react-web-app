@@ -1,18 +1,14 @@
+import PostSummaryItem from "./PostSummaryItem";
+import Posts from "./Posts.json";
 import React from "react";
-import {useSelector} from "react-redux";
-import PostSummaryItem
-    from "./post-summary-item";
 
 const PostSummaryList = () => {
-    const postsArray = useSelector(state => state.postsSummary)
-    return(
-        <ul className="list-group">
-            {
-                postsArray&&postsArray.map(post =>
-                    <PostSummaryItem
-                        key={post._id} post={post}/> )
-            }
-        </ul>
-    );
+  return (
+    <ul className="list-group">
+      {Posts.map((post) => (
+        <PostSummaryItem post={post} />
+      ))}
+    </ul>
+  );
 };
 export default PostSummaryList;

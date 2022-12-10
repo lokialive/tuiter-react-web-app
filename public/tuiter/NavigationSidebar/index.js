@@ -1,216 +1,67 @@
 const NavigationSidebar = (active) => {
-    if(active == 'home'){
-        return(`
-           
-            <div class="list-group">
-                <div class="list-group-item bg-black text-white mb-2">
-                    <i class="fa-solid fa-t"></i></div>
-                <a href="../HomeScreen/index.html" class="list-group-item active list-group-item-action text-white my-2" style="background-color: rgb(29,161,242)">
-                    <i class="fa-solid fa-house"></i> <span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Home</span></a>
-                <a href="../ExploreScreen/index.html" class="list-group-item list-group-item-action active bg-black text-white border-0 my-2">
-                    <i class="fa-solid fa-hashtag me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2"><b>Explore</b></span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-bell me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size-18 ms-2">Notifications</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-envelope  me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Messages</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-bookmark me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Bookmarks</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-rectangle-list me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Lists</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-user me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Profile</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-comment-dots me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">More</span></a>
-            </div>
-            <div style="width: 80%"><button class="btn btn-primary w-100 rounded-pill mt-2">Tuit</button></div>
-  
- `);
-    }else if(active == 'explore'){
-        return(`
-           
-            <div class="list-group">
-                <div class="list-group-item bg-black text-white mb-2">
-                    <i class="fa-solid fa-t"></i></div>
-                <a href="../HomeScreen/index.html" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-solid fa-house"></i> <span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Home</span></a>
-                <a href="../ExploreScreen/index.html" class="list-group-item list-group-item-action active text-white border-0 my-2" style="background-color: rgb(29,161,242)">
-                    <i class="fa-solid fa-hashtag me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2"><b>Explore</b></span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-bell me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size-18 ms-2">Notifications</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-envelope  me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Messages</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-bookmark me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Bookmarks</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-rectangle-list me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Lists</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-user me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Profile</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-comment-dots me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">More</span></a>
-            </div>
-            <div style="width: 80%"><button class="btn btn-primary w-100 rounded-pill mt-2">Tuit</button></div>
-  
- `);
-    }else if(active == 'notifications'){
-        return(`
-           
-            <div class="list-group">
-                <div class="list-group-item bg-black text-white mb-2">
-                    <i class="fa-solid fa-t"></i></div>
-                <a href="../HomeScreen/index.html" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-solid fa-house"></i> <span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Home</span></a>
-                <a href="../ExploreScreen/index.html" class="list-group-item list-group-item-action bg-black text-white border-0 my-2">
-                    <i class="fa-solid fa-hashtag me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2"><b>Explore</b></span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2"  style="background-color: rgb(29,161,242)">
-                    <i class="fa-regular fa-bell me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size-18 ms-2">Notifications</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-envelope  me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Messages</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-bookmark me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Bookmarks</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-rectangle-list me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Lists</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-user me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Profile</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-comment-dots me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">More</span></a>
-            </div>
-            <div style="width: 80%"><button class="btn btn-primary w-100 rounded-pill mt-2">Tuit</button></div>
-  
- `);
-    }else if(active == 'messages'){
-        return(`
-           
-            <div class="list-group">
-                <div class="list-group-item bg-black text-white mb-2">
-                    <i class="fa-solid fa-t"></i></div>
-                <a href="../HomeScreen/index.html" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-solid fa-house"></i> <span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Home</span></a>
-                <a href="../ExploreScreen/index.html" class="list-group-item list-group-item-action bg-black text-white border-0 my-2">
-                    <i class="fa-solid fa-hashtag me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2"><b>Explore</b></span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2" >
-                    <i class="fa-regular fa-bell me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size-18 ms-2">Notifications</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2" style="background-color: rgb(29,161,242)">
-                    <i class="fa-regular fa-envelope  me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Messages</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-bookmark me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Bookmarks</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-rectangle-list me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Lists</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-user me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Profile</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-comment-dots me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">More</span></a>
-            </div>
-            <div style="width: 80%"><button class="btn btn-primary w-100 rounded-pill mt-2">Tuit</button></div>
-  
- `);
-    }else if(active == 'bookmarks'){
-        return(`
-           
-            <div class="list-group">
-                <div class="list-group-item bg-black text-white mb-2">
-                    <i class="fa-solid fa-t"></i></div>
-                <a href="../HomeScreen/index.html" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-solid fa-house"></i> <span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Home</span></a>
-                <a href="../ExploreScreen/index.html" class="list-group-item list-group-item-action bg-black text-white border-0 my-2">
-                    <i class="fa-solid fa-hashtag me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2"><b>Explore</b></span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-bell me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size-18 ms-2">Notifications</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-envelope  me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Messages</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2" style="background-color: rgb(29,161,242)">
-                    <i class="fa-regular fa-bookmark me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Bookmarks</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-rectangle-list me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Lists</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-user me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Profile</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-comment-dots me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">More</span></a>
-            </div>
-            <div style="width: 80%"><button class="btn btn-primary w-100 rounded-pill mt-2">Tuit</button></div>
-  
- `);
-    }else if(active == 'lists'){
-        return(`
-           
-            <div class="list-group">
-                <div class="list-group-item bg-black text-white mb-2">
-                    <i class="fa-solid fa-t"></i></div>
-                <a href="../HomeScreen/index.html" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-solid fa-house"></i> <span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Home</span></a>
-                <a href="../ExploreScreen/index.html" class="list-group-item list-group-item-action bg-black text-white border-0 my-2">
-                    <i class="fa-solid fa-hashtag me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2"><b>Explore</b></span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-bell me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size-18 ms-2">Notifications</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-envelope  me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Messages</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-bookmark me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Bookmarks</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2" style="background-color: rgb(29,161,242)">
-                    <i class="fa-regular fa-rectangle-list me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Lists</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-user me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Profile</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-comment-dots me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">More</span></a>
-            </div>
-            <div style="width: 80%"><button class="btn btn-primary w-100 rounded-pill mt-2">Tuit</button></div>
-  
- `);
-    }else if(active == 'lists'){
-        return(`
-           
-            <div class="list-group">
-                <div class="list-group-item bg-black text-white mb-2">
-                    <i class="fa-solid fa-t"></i></div>
-                <a href="../HomeScreen/index.html" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-solid fa-house"></i> <span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Home</span></a>
-                <a href="../ExploreScreen/index.html" class="list-group-item list-group-item-action bg-black text-white border-0 my-2">
-                    <i class="fa-solid fa-hashtag me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2"><b>Explore</b></span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-bell me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size-18 ms-2">Notifications</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-envelope  me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Messages</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-bookmark me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Bookmarks</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-rectangle-list me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Lists</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2" style="background-color: rgb(29,161,242)">
-                    <i class="fa-regular fa-user me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Profile</span></a>
-                <a href="#" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-regular fa-comment-dots me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">More</span></a>
-            </div>
-            <div style="width: 80%"><button class="btn btn-primary w-100 rounded-pill mt-2">Tuit</button></div>
-  
- `);
-    }else if(active == 'more'){
-        return(`
-           
-            <div class="list-group">
-                <div class="list-group-item bg-black text-white mb-2">
-                    <i class="fa-solid fa-t"></i></div>
-                <a href="../HomeScreen/index.html" class="list-group-item list-group-item-action bg-black text-white my-2">
-                    <i class="fa-solid fa-house"></i> <span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Home</span></a>
-                <a href="../ExploreScreen/index.html" class="list-group-item list-group-item-action bg-black text-white border-0 my-2">
-                    <i class="fa-solid fa-hashtag me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2"><b>Explore</b></span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-bell me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size-18 ms-2">Notifications</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-envelope  me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Messages</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-bookmark me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Bookmarks</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-rectangle-list me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Lists</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2">
-                    <i class="fa-regular fa-user me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">Profile</span></a>
-                <a href="#" class="list-group-item active list-group-item-action text-white my-2" style="background-color: rgb(29,161,242)">
-                    <i class="fa-regular fa-comment-dots me-2"></i><span class="d-xxl-inline d-xl-inline d-lg-none d-md-none d-sm-none d-none wd-text-size ms-2">More</span></a>
-            </div>
-            <div style="width: 80%"><button class="btn btn-primary w-100 rounded-pill mt-2">Tuit</button></div>
-  
- `);
-    }
+  return `
+                <div class="list-group">
+                    <a class="list-group-item" href="/public/tuiter">
+                        <i class="fa fa-twitter"></i> </a>
 
-}
+                <!-- continuing with the rest of the list -->
+
+                    <a class="list-group-item ${
+                      active === "Home" ? "active" : ""
+                    }" href="/tuiter/HomeScreen/index.html">
+                        <i class="fa fa-home"></i>
+                        <span class="d-none d-xl-inline d-lg-none p-1"> Home</span>
+                    </a>
+                    <a class="list-group-item ${
+                      active === "Explore" ? "active" : ""
+                    }" href="/tuiter/ExploreScreen/index.html">
+                        <i class="fa fa-hashtag"></i>
+                        <span class="d-none d-xl-inline d-lg-none p-1"> Explore</span>
+                    </a>
+                    <a class="list-group-item ${
+                      active === "Notifications" ? "active" : ""
+                    }" href="/">
+                        <i class="fa fa-bell"></i>
+                        <span class="d-none d-xl-inline d-lg-none p-1"> Notifications</span>
+                    </a>
+                    <a class="list-group-item ${
+                      active === "Messages" ? "active" : ""
+                    }" href="/">
+                        <i class="fa fa-envelope"></i>
+                        <span class="d-none d-xl-inline d-lg-none p-1"> Messages</span>
+                    </a>
+                    <a class="list-group-item ${
+                      active === "Bookmarks" ? "active" : ""
+                    }" href="/">
+                        <i class="fa fa-bookmark"></i>
+                        <span class="d-none d-xl-inline d-lg-none p-1"> Bookmarks</span>
+                    </a>
+                    <a class="list-group-item ${
+                      active === "Lists" ? "active" : ""
+                    }" href="/">
+                        <i class="fa fa-list"></i>
+                        <span class="d-none d-xl-inline d-lg-none p-1"> Lists</span>
+                    </a>
+    
+                    <a class="list-group-item ${
+                      active === "Profile" ? "active" : ""
+                    }" href="/">
+                        <i class="fa fa-user"></i>
+                        <span class="d-none d-xl-inline d-lg-none p-1"> Profile</span>
+                    </a>
+                    <a class="list-group-item ${
+                      active === "More" ? "active" : ""
+                    }" href="/">
+                        <i class="fa fa-circle"></i>
+                        <span class="d-none d-xl-inline d-lg-none p-1"> More</span>
+                    </a>
+                </div>
+                
+                <div class="d-grid mt-2">
+                    <a href="tweet.html"
+                       class="btn btn-primary btn-block rounded-pill">
+                        Tuit</a>
+                </div>
+        `;
+};
 export default NavigationSidebar;
-//function clickA(){
-//     document
-// }

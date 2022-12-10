@@ -1,44 +1,82 @@
-import React, {useState} from "react";
-import {createTuitThunk}
-    from "../../services/tuits-thunks";
-import {useDispatch} from "react-redux";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+// import { createTuit } from "../reducers/tuits-reducer";
+import { createTuitThunk } from "../../services/tuits-thunks";
 
 const WhatsHappening = () => {
-    let [whatsHappening, setWhatsHappening] = useState('');
-    const dispatch = useDispatch();
-    const tuitClickHandler = () => {
-        const newTuit = {
-            tuit: whatsHappening
-        };
-        dispatch(createTuitThunk(newTuit));
-        console.log(whatsHappening);
+  const dispatch = useDispatch();
+  const [whatsHappening, setWhatsHappening] = useState("");
+  const tuitClickHandler = () => {
+    const newTuit = {
+      tuit: whatsHappening,
     };
-    return (
-        <div className="row">
-            <div className="col-auto">
-                <img src="../../images/NASA_icon.png" alt="" width={60}/>
-            </div>
-            <div className="col-10">
-       <textarea value={whatsHappening} placeholder="What's happening?"
-                 className="form-control border-0"
-                 onChange={(event) => setWhatsHappening(event.target.value)}>
-       </textarea>
-                <div>
-                    <button className="rounded-pill btn btn-primary float-end mt-2 ps-3 pe-3 fw-bold"
-                            onClick={tuitClickHandler}>
-                        Tuit
-                    </button>
-                    <div className="text-primary fs-2">
-                        <i className="bi bi-card-image me-3"></i>
-                        <i className="bi bi-filetype-gif me-3"></i>
-                        <i className="bi bi-bar-chart me-3"></i>
-                        <i className="bi bi-emoji-smile me-3"></i>
-                        <i className="bi bi-geo-alt"></i>
-                    </div>
-                </div>
-            </div>
-            <div className="col-12"><hr/></div>
+    console.log("newTuit", newTuit);
+    dispatch(createTuitThunk(newTuit));
+  };
+  return (
+    <div className="row">
+      <div className="col-2">
+        <img
+          src="/tuiter/images/nasa.png"
+          alt=""
+          style={{
+            marginTop: "10px",
+            width: "80%",
+            borderRadius: "50%",
+          }}
+        />
+      </div>
+      <div className="col-10">
+        <textarea
+          value={whatsHappening}
+          onChange={(event) => setWhatsHappening(event.target.value)}
+          placeholder="What's happening?"
+          style={{
+            width: "100%",
+            backgroundColor: "black",
+            border: "none",
+            color: "white",
+          }}
+        ></textarea>
+        <hr />
+        <div>
+          <i
+            className="fa fa-picture-o text-primary"
+            aria-hidden="true"
+            style={{ marginRight: "25px", fontSize: "20px" }}
+          ></i>
+          <i
+            className="fa fa-file-image-o text-primary"
+            aria-hidden="true"
+            style={{ marginRight: "25px", fontSize: "20px" }}
+          ></i>
+          <i
+            className="fa fa-bar-chart text-primary"
+            aria-hidden="true"
+            style={{ marginRight: "25px", fontSize: "20px" }}
+          ></i>
+          <i
+            className="fa fa-smile-o text-primary"
+            aria-hidden="true"
+            style={{ marginRight: "25px", fontSize: "20px" }}
+          ></i>
+          <i
+            className="fa fa-map-marker text-primary"
+            aria-hidden="true"
+            style={{ marginRight: "25px", fontSize: "20px" }}
+          ></i>
+          <button
+            className="btn btn-primary btn-block rounded-pill"
+            style={{ float: "right" }}
+            onClick={tuitClickHandler}
+          >
+            Tuit
+          </button>
+          <br />
+          <br />
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 export default WhatsHappening;

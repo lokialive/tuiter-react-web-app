@@ -1,38 +1,75 @@
-const PostItem = (post) => {
-    return(`
-    
-    <link href="../HomeScreen/index.css" rel="stylesheet">
-    <li class="list-group-item  bg-black">
-<div class=" wd-border-bottom">
+const PostSummaryItem = (post) => {
+  return `<li class="list-group-item" 
+                  style="border: 1px solid rgba(255,255,255,.25); background-color: black; border-radius:none">
 
-            <img src=${post.icon}  align="top" style="display: inline-block" class="wd-avatar wd-margin-top wd-margin-left float-start"/>
-            <div style="display: inline-block" class="wd-margin-left-12 wd-margin-top">
+              <div class="row">
 
-                <div>
-                    <h3 style="display: inline-block" class="wd-font-size-15 text-white">${post.name}<span class="fa-stack" style="vertical-align: top; transform: scale(0.5,0.5) translate(-15px,-11px);"><i class="fa-solid fa-certificate fa-stack-2x"></i><i class="fa-solid fa-check fa-stack-1x text-black"></i></span></h3>
-                    <p style="display: inline-block" class="text-secondary wd-font-size-15">${post.userName} ${post.time}</p>
-<!--                    <a class="wd-color-gray" style=" margin-left: 100%;"> ... </a>-->
-                </div>
+                  <div class="col-1">
+                      <img src=${post.avatarImage} 
+                      style="margin-top: 15px; width: 155%; border-radius: 55%;" />
+                  </div>
+  
+                  <div class="col-11" style="padding-left:18px;">
+                      <div>
+                          <span>
+                              <b>${post.author}</b> 
+                              <i class="fa fa-check-circle" aria-hidden="true"></i> 
+                          </span>
 
-                <div>
-                    <p class="wd-content-width wd-margin-bottom-12 wd-margin-right-16 text-white">${post.topic}</p>
-                </div>
-                <img class="wd-content-img" src=${post.image}/>
-                <div class="wd-article-content">
-                    <h3 class=" text-white">${post.title}</h3>
-                    <p class="text-secondary wd-font-size-20">${post.content}</p>
-                    <p class="text-secondary">${post.website}</p>
-                </div>
-                <div class="wd-font-size-13 wd-icon-list " >
-                    <a href="#" class="wd-color-lightgray text-secondary wd-font-size-15"><i class="fa-regular fa-comment"></i> ${post.comment}</a>
-                    <a href="#" class="wd-color-lightgray text-secondary wd-font-size-15"><i class="fa-solid fa-repeat"></i> ${post.retweet}</a>
-                    <a href="#" class="wd-color-lightgray text-secondary wd-font-size-15"><i class="fa-regular fa-heart"></i> ${post.like}</a>
-                    <a href="#" class="wd-color-lightgray text-secondary wd-font-size-15"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
-                </div>
-                <br/>
-<!--                <div class="wd-border-bottom"></div>-->
-            </div>
-        `
-    );
-}
-export default PostItem;
+                          <span class="text-muted">
+                              @${post.userName} - ${post.time}
+                          </span>
+
+                          <span style="float:right">&#183;&#183;&#183;</span>
+                      </div>
+                      <div>
+                          ${post.title}
+                      </div>
+                      <div class="mt-2">
+                          <img
+                              src=${post.postImageUrl}
+                              style="border-radius: 20px 20px 0 0; width:100%; height: 410px; object-fit: cover;"
+                          />
+                          ${
+                            post.postContent
+                              ? `
+                              <div class="pt-2" 
+                              style=" padding: 12px; border-radius: 0 0 15px 15px; border: 1px solid rgba(255,255,255,.25);
+                                              border-top:none;">
+                                      ${post.postContent.postHeading} <br />
+                                      <span class="text-muted">
+                                          ${post.postContent.postContent} <br />
+                                          <i class="fa fa-link" aria-hidden="true"></i> ${post.postContent.postSiteLink}
+                                      </span>
+                                  </div>`
+                              : ""
+                          }
+                          
+                          <div class="p-2 d-flex justify-content-between text-muted">
+                              <i class="fa fa-comment" aria-hidden="true" style="font-weight:310;">
+                                  <span style="margin-left: 6px;">${
+                                    post.numberOfComments
+                                  }</span>
+                              </i>
+                              
+                              <i class="fa fa-retweet" aria-hidden="true">
+                                  <span style="margin-left: 6px; font-weight:110;">${
+                                    post.numberOfRetweets
+                                  }</span>
+                              </i>
+
+                              <i class="fa fa-heart" aria-hidden="true" style="font-weight:110;">
+                                  <span style="margin-left: 6px;">${
+                                    post.numberOfLikes
+                                  }</span>
+                              </i>
+
+                              <i class="fa fa-upload" aria-hidden="true" style="font-weight:610;"> </i>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+          </li>`;
+};
+export default PostSummaryItem;

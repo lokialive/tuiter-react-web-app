@@ -1,22 +1,11 @@
 import PostItem from "./PostItem.js";
-import posts from "./posts.js"
-import PostItemNoContent from "./PostItemNoContent.js";
-import postNoContents from "./postNoContents.js"
-const  PostList = () => {
-    return (`
-           <ul class="list-group">
-           <!-- continue here -->
-                ${
-        posts.map(post => {
-            return(PostItem(post));
-        }).join('')
-    }
-                ${
-        postNoContents.map(postNoContent => {
-            return(PostItemNoContent(postNoContent));
-        }).join('')
-    }
-           </ul>
-`); }
+import Posts from "./posts.js";
 
-export default  PostList;
+const PostSummaryList = () => {
+  return `
+        <ul class="list-group">
+            ${Posts.map((post) => PostItem(post)).join("")}
+        </ul>
+    `;
+};
+export default PostSummaryList;

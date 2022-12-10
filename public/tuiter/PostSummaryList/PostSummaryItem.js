@@ -1,19 +1,32 @@
 const PostSummaryItem = (post) => {
-    return(`
-    <li class="list-group-item  bg-black">
-                    <div class="row">
-                        <div class="col-10">
-                            <div class="text-secondary">${post.topic}</div>
-                            <div class="fw-bolder text-white">${post.userName} <span class="fa-stack" style="vertical-align: top; transform: scale(0.5,0.5) translate(-15px,-7px);"><i class="fa-solid fa-certificate fa-stack-2x"></i><i class="fa-solid fa-check fa-stack-1x text-black"></i></span> <span class="text-secondary">${post.time}</span></div>
-                            <div class="fw-bolder text-white">${post.title}</div>
-                        </div>
-                        <div class="col-2">
-                            <img src=${post.image} width="80px" class="float-end" title=${post.userName}>
-                        </div>
-                    </div>
-                    
-                </li>
-        `
-    );
-}
+  return `<li class="list-group-item">
+              <div class="row wd-explore-story-container" 
+              style="padding-top: 4px; padding-bottom: 4px;">
+                  <div class="col-10" style="font-size: 14px;">
+                      <div class="text-muted">${post.topic}</div>
+
+                      <div class="">
+                          <b>${post.userName}</b>&nbsp;
+                          <i class="fa fa-check-circle" aria-hidden="true"></i>
+                          <span class="text-muted">&nbsp;- ${post.time}</span>
+                      </div>
+
+                      <div class="">
+                      <b> ${post.title} </b>
+                      </div>
+
+                  </div>
+
+                  <div class="col-2 wd-explore-feed-img-container wd-flex-and-center" 
+                       style="display: flex; justify-content: center; align-items: center;">
+                      <img
+                          src=${post.image}
+                          class="wd-explore-feed-img"
+                          style=" height: 62px; width: 62px; display: block; border-radius: 6px; object-fit: cover;"
+                      />
+                  </div>
+                  
+              </div>
+          </li>`;
+};
 export default PostSummaryItem;

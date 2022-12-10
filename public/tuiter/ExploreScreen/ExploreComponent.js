@@ -1,47 +1,70 @@
 import PostSummaryList from "../PostSummaryList/index.js";
 
 const ExploreComponent = () => {
-    return(`
+  return `
+            <!-- Search Box and cog-->
+
             <div class="row">
-                <div class="col-11" style="width: 85%;height: 50px">
-                    <div class="position-relative">
-                        <input class="ps-5 form-control rounded-pill bg-white border-0 w-100" style="height: 40px" placeholder="Search Tuiter"/>
-                        <div class="position-absolute wd-search-tuiter"><i class="fa-sharp fa-solid fa-magnifying-glass text-secondary"></i></div>
+                <div class="col-10"
+                        style="display: flex; justify-content: center; align-items: center;">
+                    <div class="input-group">
+                        <span class="input-group-append"
+                                style="background-color:white; border-radius: 25px 0 0 25px;">
+                            <button class="btn" type="button">
+                            <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                        <input
+                            class="form-control" type="search"
+                            placeholder="Search Twitter" style="border-radius: 0 25px 25px 0;"
+                        />
                     </div>
                 </div>
-                <span class="col-1" style="width: 15%;">
-                    <i class="fa-solid fa-gear position-relative float-end mt-3 me-4" style="color: rgb(29,161,242);"></i>
-<!--                    <span class="fa-stack position-relative float-end mt-3 me-4" style="vertical-align: top; transform: scale(0.5,0.5) translate(-15px,-7px);"><i class="fa-solid fa-gear text-white fa-stack-2x"></i><i class="fa-solid fa-gear fa-stack-1x text-black"></i></span>-->
-                </span>
-            </div>
-            
-           <ul class="nav nav-tabs mt-2 mb-2 border-0" style="transform: translate(-30px,0px)">
-                <li class="nav-item border-0 px-3">
-                    <a class="nav-link text-white" style="background-color: rgb(29,161,242);" href="#">For You</a>
-                </li>
-                <li class="nav-item border-0 px-3">
-                    <a class="nav-link text-white" href="#">Trending</a>
-                </li>
-                <li class="nav-item border-0 px-3">
-                    <a class="nav-link text-white" href="#">News</a>
-                </li>
-                <li class="nav-item border-0 px-3">
-                    <a class="nav-link text-white" href="#" tabindex="-1">Sports</a>
-                </li>
-                <li class="nav-item selected d-xxl-inline d-xl-inline d-lg-inline d-md-inline d-sm-none d-none px-3">
-                    <a class="nav-link text-white pb-3" href="#">Entertainment</a>
-                </li>
-            </ul>
-            <div class="position-relative">
-                <img src="../../images/starship.jpg" alt="starship" width="100%">
-                <div class="position-absolute bottom-0 left-0 text-dark wd-font-arial ms-3">
-                    <h6 class="m-0 p-0">Music . Last night</h6>
-                    <div><h1>SpaceX's Starship <i class="fa-solid fa-earth-americas"></i></h1></div>
+                <div class="col-2" 
+                     style="display: flex; justify-content: center; align-items: center;>
+                    <a href="#"
+                    ><i class="fa fa-inverse fa-cog fa-2x" aria-hidden="true"></i
+                    ></a>
                 </div>
-
             </div>
-           <!-- image with overlaid text -->
+
+            <!-- Tab Bar Section -->
+
+           <ul class="nav mb-2 mt-2 nav-tabs">
+              <span class="nav-item">
+                <a class="nav-link nav-link active" href="./for-you.html"><small>For You</small></a>
+              </span>
+              <span class="nav-item">
+                <a class="nav-link" href="./trending.html"><small>Trending</small></a>
+              </span>
+              <span class="nav-item">
+                <a class="nav-link " href="#"><small>COVID-19</small></a>
+              </span>
+              <span class="nav-item">
+                <a class="nav-link " href="./news.html"><small>News</small></a>
+              </span>
+              <span class="nav-item">
+                <a class="nav-link " href="./sports.html"><small>Sports</small></a>
+              </span>
+              <span class="nav-item d-none d-md-inline d-sm-none">
+                <a class="nav-link " href="./entertainment.html">
+                  <small>Entertainment</small>
+                </a>
+              </span>
+           </ul>
+
+           <!-- Image Container Section with overlaid text -->
+           
+           <div class="row position-relative">
+                <div>
+                    <img style="width: 100%; height: 100%; padding: none;" 
+                         src="/images/starship.jpeg" alt="SpaceX Ship" />
+                </div>
+                <div class="position-absolute bottom-0 start-0 ps-3">
+                    <h2 class="">SpaceX's Starship</h2>
+                </div>
+          </div>
            ${PostSummaryList()}
-    `);
-}
+    `;
+};
 export default ExploreComponent;
