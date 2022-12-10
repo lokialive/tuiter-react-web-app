@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import TuitListItem from './TuitItem'
@@ -8,7 +9,7 @@ const TuitList = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(findTuitsThunk())
-  })
+  }, [])
 
   console.log('tuits', tuits)
 
